@@ -8,7 +8,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/travelnews.css">
     <link
       rel="stylesheet"
       type="text/css"
@@ -208,9 +213,40 @@
         </div>
       </div>
     </div>
+    <div class="container mt-3 travelNews">
+        <div class="row customNews">
+            <div class="col-sm-6 p-3">
+                <a href="#"><img src="img/travelnews.png" alt="지금 바로 '가볼래-터' 구독하고 여행복권 긁으러 가기😉"></a>
+            </div>
+            <div class="col-sm-6 p-3">
+              <div class="article bd0">
+								<a href="#" class="tit_atc" title="오늘의 여행 소식 페이지로 이동">오늘의 여행 소식<span class="btn_more"><i class="ri-add-line"></i></span></a>
+								<ul class="list_board">
+                  <li class="non"><a href="#" title="한국관광공사, KTX 중앙선 개통 연계 부산 봄꽃 여행상품 출시 로 이동"><em style="color:#1f40c3">한국관광공사ㅣ</em>한국관광공사, KTX 중앙선 개통 연계 부산 봄꽃 여행상품 출시</a></li>
+                  <li><a href="#" title="창경궁에서 선보이는 빛의 향연, 「창경궁 물빛연화」(3.7.~12.31.) 로 이동"><em style="color:#1f40c3">국가유산청ㅣ</em>창경궁에서 선보이는 빛의 향연, 「창경궁 물빛연화」(3.7.~12.31.)</a></li>
+                  <li><a href="#" title="봄맞이 여행, 숙박할인권으로 준비하세요 로 이동"><em style="color:#1f40c3">문화체육관광부ㅣ</em>봄맞이 여행, 숙박할인권으로 준비하세요</a></li>
+                  <li><a href="#" title="트레킹 제일도시 원주시, 2025년 걷기여행길 프로그램 운영 로 이동"><em style="color:#1f40c3">원주시청ㅣ</em>트레킹 제일도시 원주시, 2025년 걷기여행길 프로그램 운영</a></li>
+                </ul>
+							</div>
+            </div>
+        </div>
+    </div>
+    <div id="marketingBanner" class="public_banner">
+      <div class="banner">
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" loop="true" autoplay="true">
+          <swiper-slide><img src="img/banner-1.png"></swiper-slide>
+          <swiper-slide><img src="img/banner-2.png"></swiper-slide>
+          <swiper-slide><img src="img/banner-3.png"></swiper-slide>
+          <swiper-slide><img src="img/banner-4.png"></swiper-slide>
+        </swiper-container>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!------------------ script ---------------------->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="js/register.js"></script>
     <script src="js/login.js"></script>
   </body>
