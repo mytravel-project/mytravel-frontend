@@ -1,0 +1,15 @@
+.like-btn {
+    width: 40px;
+    height: 40px;
+    background: url('/img/icon_good_unfill.png') no-repeat;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    transition: background-position 0.3s ease;
+}
+.like-btn.active {
+    width: 40px;
+    height: 40px;
+    background: url('/img/icon_good_fill.png') no-repeat;
+    background-size: cover;
+}

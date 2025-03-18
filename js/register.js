@@ -98,8 +98,6 @@ document
     try {
       const response = await axios.post("http://localhost:8080/register", data);
 
-      document.getElementById("effectMsg").innerHTML = response.data;
-
       if (response.data === "환영합니다") {
         const modalElement = document.getElementById("signupModal");
         let modal = bootstrap.Modal.getInstance(modalElement);
