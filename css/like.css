@@ -1,0 +1,17 @@
+.like-btn {
+    width: 40px;
+    height: 40px;
+    background: url('/img/icon_good.png') no-repeat;
+    background-size: cover;
+    background-position: 0 0; /* 기본 상태 (좋아요 X) */
+    border: none;
+    cursor: pointer;
+    transition: background-position 0.3s ease;
+}
+.like-btn.active {
+    background-position: 0 -40px; /* 활성 상태 (좋아요 O) */
+}
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

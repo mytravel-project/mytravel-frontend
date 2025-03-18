@@ -9,13 +9,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/like.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css"
     />
   </head>
-  <body>
+  <body onload="checkLoginState()">
     <nav class="navbar">
       <div class="logo">대한민국 <span class="circle">구</span>석구석</div>
       <ul class="nav-menu">
@@ -208,10 +209,45 @@
         </div>
       </div>
     </div>
+    <!-- like test -->
+    <div class="container mt-4">
+      <div class="row g-4">
+          <!-- 좋아요 버튼이 있는 카드 -->
+          <div class="col-md-6 col-lg-3">
+              <div class="card p-2 text-center">
+                  <strong>곤양향교</strong>
+                  <span>경상남도 사천시</span>
+                  <button type="button" class="like-btn"></button>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+              <div class="card p-2 text-center">
+                  <strong>휴온천</strong>
+                  <span>경상북도 칠곡군</span>
+                  <button type="button" class="like-btn"></button>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+              <div class="card p-2 text-center">
+                  <strong>유성온천지구</strong>
+                  <span>대전광역시 유성구</span>
+                  <button type="button" class="like-btn"></button>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+              <div class="card p-2 text-center">
+                  <strong>단양 다누리아쿠아리움</strong>
+                  <span>충청북도 단양군</span>
+                  <button type="button" class="like-btn"></button>
+              </div>
+          </div>
+      </div>
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="js/register.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/like.js"></script>
   </body>
 </html>
