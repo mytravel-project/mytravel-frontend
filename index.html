@@ -209,79 +209,87 @@
         </div>
       </div>
     </div>
-    <!-- section/travel-kokkok-AI -->
-    <div class="main_curation_area">
-      <h2><a href="#"><img src="img/tit_curation_area.png" alt="여행콕콕"></a></h2>
-      <div class="cont_wrap">
-        <ul class="tab">
-          <li class="menu3 on">
-            <a href="#tabMenu03" title="선택됨">
-              <span>AI콕콕</span>
-            </a>
-          </li>
-          <li class="menu1">
-              <a href="#tabMenu01" title="">
-                  <span>핫플콕콕</span>
+    <!-- section/travel-kokkok -->
+    <div id="mainContainerPC" style="visibility: visible; position: static; left: -9999px;">
+      <div id="contents" class="main_contents">
+        <div class="pc_main_cont">
+          <div class="main_curation_area">
+        <h2><a href="#"><img src="img/tit_curation_area.png" alt="여행콕콕"></a></h2>
+        <div class="cont_wrap">
+          <ul class="tab">
+            <li class="menu3 on">
+              <a href="#tabMenu03" title="선택됨">
+                <span>AI콕콕</span>
               </a>
-          </li>
-          <li class="menu2">
-              <a href="#tabMenu02" title="">
-                  <span>AI콕콕 플래너</span>
-              </a>
-          </li>
+            </li>
+            <li class="menu1">
+                <a href="#tabMenu01" title="">
+                    <span>핫플콕콕</span>
+                </a>
+            </li>
+            <li class="menu2">
+                <a href="#tabMenu02" title="">
+                    <span>AI콕콕 플래너</span>
+                </a>
+            </li>
           </ul>
-        <div class="tab_cont active" id="tabMenu03">
-          <h3 class="blind">AI콕콕</h3>
-            <p>당신의 성향, 취향 분석 완료! 마음에 쏙 들 여행지를 추천해 드릴게요.</p>
-            <div class="ai_list">
-              <ul>
-                <li>
-                    <div>
-                        <a href="#">
-                            <div class="img_wrap" style="background-image:url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=f3350451-7f58-47ce-9c6b-5f6e0e5bedc9&amp;mode=progress)"></div>
-                            <strong>곤양향교</strong>
-                            <span>경상남도 사천시</span>
-                        </a>
-                        <button type="button" class="good" title="">좋아요</button>
-                    </div>
-                </li>
-                <li class="on">
-                    <div>
-                        <a href="#">
-                            <div class="img_wrap" style="background-image:url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=1c985348-c567-4b8a-9f8d-98a865a5e0ad&amp;mode=progress)"></div>
-                            <strong>휴온천</strong>
-                            <span>경상북도 칠곡군</span>
-                        </a>
-                        <button type="button" class="good" title="">좋아요</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="#">
-                            <div class="img_wrap" style="background-image:url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=718517ac-f6b2-4ec4-8ac5-fe8530a4b44a&amp;mode=progress)"></div>
-                            <strong>유성온천지구</strong>
-                            <span>대전광역시 유성구</span>
-                        </a>
-                        <button type="button" class="good" title="">좋아요</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <a href="#">
-                            <div class="img_wrap" style="background-image:url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=9c50bae2-ae6d-4dc2-b51a-0a61f340e691&amp;mode=progress)"></div>
-                            <strong>단양 다누리아쿠아리움</strong>
-                            <span>충청북도 단양군</span>
-                        </a>
-                        <button type="button" class="good" title="">좋아요</button>
-                    </div>
-                </li>
-              </ul>
-              <div class="more_view">
-                  <button type="button" title="클릭하면 새로고침이 됩니다.">오늘의 <strong>AI콕콕</strong> 추천</button>
-                  <a href="/list/travelinfo.do?service=ai" title="AI콕콕 페이지로 이동">더보기</a>
+          <div class="tab_cont active" id="tabMenu01">은재언니가 작업할 공간</div>
+          <div class="tab_cont active" id="tabMenu03">
+            <h3 class="blind">AI콕콕</h3>
+              <p>당신의 성향, 취향 분석 완료! 마음에 쏙 들 여행지를 추천해 드릴게요.</p>
+              <div class="ai_list">
+                <ul>
+                  <li>
+                      <div>
+                          <a href="#">
+                              <div class="img_wrap" style="background-image:url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=f3350451-7f58-47ce-9c6b-5f6e0e5bedc9&amp;mode=progress)"></div>
+                              <strong>곤양향교</strong>
+                              <span>경상남도 사천시</span>
+                          </a>
+                          <button type="button" class="like-btn" title="" data-place-id="1">좋아요</button>
+                      </div>
+                  </li>
+                  <li class="on">
+                      <div>
+                          <a href="#">
+                              <div class="img_wrap" style="background-image:url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=1c985348-c567-4b8a-9f8d-98a865a5e0ad&amp;mode=progress)"></div>
+                              <strong>휴온천</strong>
+                              <span>경상북도 칠곡군</span>
+                          </a>
+                          <button type="button" class="like-btn" data-place-id="2" title="">좋아요</button>
+                      </div>
+                  </li>
+                  <li>
+                      <div>
+                          <a href="#">
+                              <div class="img_wrap" style="background-image:url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=718517ac-f6b2-4ec4-8ac5-fe8530a4b44a&amp;mode=progress)"></div>
+                              <strong>유성온천지구</strong>
+                              <span>대전광역시 유성구</span>
+                          </a>
+                          <button type="button" class="like-btn" data-place-id="3" title="">좋아요</button>
+                      </div>
+                  </li>
+                  <li>
+                      <div>
+                          <a href="#">
+                              <div class="img_wrap" style="background-image:url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=9c50bae2-ae6d-4dc2-b51a-0a61f340e691&amp;mode=progress)"></div>
+                              <strong>단양 다누리아쿠아리움</strong>
+                              <span>충청북도 단양군</span>
+                          </a>
+                          <button type="button" class="like-btn" data-place-id="4" title="">좋아요</button>
+                      </div>
+                  </li>
+                </ul>
+                <div class="more_view">
+                    <button type="button" title="클릭하면 새로고침이 됩니다.">오늘의 <strong>AI콕콕</strong> 추천</button>
+                    <a href="/list/travelinfo.do?service=ai" title="AI콕콕 페이지로 이동">더보기</a>
+                </div>
               </div>
-            </div>
+          </div>
         </div>
+          </div>
+        </div>
+      </div>
     </div>
   
     <!---------------------- script --------------------------->
@@ -290,5 +298,6 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="js/register.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/like.js"></script>
   </body>
 </html>
