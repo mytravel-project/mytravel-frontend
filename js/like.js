@@ -15,10 +15,6 @@ const checkLoginState = async () => {
     });
 };
 
-document.addEventListener("DOMContentLoaded", async () => {
-    await checkLoginState();
-});
-
 //좋아요 등록 및 취소 처리하기
 async function toggleLike(placeId, button) {
     const Authorization = sessionStorage.getItem("Authorization");
@@ -46,13 +42,6 @@ async function toggleLike(placeId, button) {
         console.error("좋아요 변경 중 오류 발생:", error);
     }
 }
-
-document.querySelectorAll(".like-btn").forEach(button => {
-    button.addEventListener("click", async () => {
-        const placeId = button.dataset.placeId;
-        await toggleLike(placeId, button);
-    });
-});
 
 //좋아요 상태 유지하기
 const restoreLikeStatus = async () => {
@@ -87,5 +76,13 @@ const restoreLikeStatus = async () => {
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
+    await checkLoginState();
     await restoreLikeStatus();
+
+    document.body.addEventListener("click", async (event) => {
+        if(event.target.classList.contains("like-btn")) {
+            const placeId = event.target.dataset.placeId;
+            await toggleLike(placeId, event.target);
+        }
+    });
 });
