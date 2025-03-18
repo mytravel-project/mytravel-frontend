@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+caption, .blind, .hidden, .ir {
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    text-indent: -9999px;
+}
+
+.main_curation_area {
+    position: relative;
+}
+
+.main_curation_area h2 {
+    width: 940px;
+    margin: 0 auto 0;
+}
+
+.main_curation_area h2 a {
+    display: block;
+    height: 66px;
+}
+
+.main_curation_area .cont_wrap {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.main_curation_area .tab {
+    position: relative;
+    display: flex;
+    text-align: center;
+    background: #567ff2;
+    border-radius: 5px;
+    box-shadow: 8px 7px 29px 0px rgba(69, 111, 228, 0.25);
+}
+
+.main_curation_area .tab li {
+    flex-grow: 1;
+    width: 33.3%;
+}
+
+.main_curation_area .tab li.menu3 a {
+    background: url(/img/menu_curation_area3.png) 50% -50px no-repeat;
+}
+
+.main_curation_area .tab li.on a {
+    background-position: 50% 0 !important;
+}
+
+.main_curation_area .tab li a {
+    display: block;
+    height: 50px;
+    text-indent: -9999px;
+    position: relative;
+}
+
+.main_curation_area .tab li.menu1 a {
+    background: url(/img/menu_curation_area1.png) 50% -50px no-repeat;
+}
+
+.main_curation_area .tab li a:before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background: #a3b9f5;
+    position: absolute;
+    left: 0;
+    top: 17px;
+}
+
+.main_curation_area .tab li:nth-child(1) a:before {
+    display: none;
+}
+
+.main_curation_area .tab li.menu2 a {
+    background: url(/img/menu_curation_area2.png) 50% -50px no-repeat;
+}
+
+.main_curation_area .tab_cont {
+    padding: 25px 0 0;
+    display: none;
+    color: #333;
+}
+
+.main_curation_area .tab_cont.active {
+    display: block;
+}
+
+.main_curation_area .tab_cont > p:before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    vertical-align: -4px;
+    background: url(/img/icon_curation_txt.png) no-repeat;
+}
+
+.main_curation_area .tab_cont > p {
+    padding: 0 0 25px;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+.main_curation_area .ai_list {
+    overflow: hidden;
+}
+
+.main_curation_area .ai_list ul {
+    display: flex;
+    margin: 0 0 30px -20px;
+}
+
+.main_curation_area .ai_list ul li {
+    overflow: hidden;
+    width: 25%;
+    height: 330px;
+    transition: 0.5s;
+}
