@@ -127,13 +127,6 @@ table {
   color: #333;
 }
 
-.circle {
-  display: inline-block;
-  border: 1px solid #333;
-  border-radius: 50%;
-  padding: 2px 5px;
-}
-
 .nav-menu {
   list-style: none;
   display: flex;
@@ -153,6 +146,7 @@ table {
 }
 
 .search-container {
+  width: 300px;
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
@@ -162,6 +156,7 @@ table {
 }
 
 .search-container input {
+  width: 100%;
   border: none;
   outline: none;
   font-size: 14px;
