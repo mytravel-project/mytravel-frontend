@@ -26,7 +26,7 @@
   </head>
   <body>
     <nav class="navbar">
-      <div class="logo">대한민국 <span class="circle">구</span>석구석</div>
+      <div class="logo"><a href="#"><img src="/img/logo-visitkorea-black.png"></a></div>
       <ul class="nav-menu">
         <li><a href="#">홈</a></li>
         <li><a href="#">테마</a></li>
@@ -64,7 +64,13 @@
             Logout
           </a>
         </div>
-        <span class="icon">🌐 한국어 ▼</span>
+        <span class="icon">🌐
+          <select class="box" id="language" name="language">
+            <option value="한국어" selected>한국어</option>
+            <option value="영어">영어</option>
+            <option value="일본어">일본어</option>
+          </select>
+        </span>
       </div>
     </nav>
     <!-- signupModal -->

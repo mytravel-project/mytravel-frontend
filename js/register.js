@@ -346,19 +346,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-const birthYearElement = document.getElementById('birth-year')
+document.addEventListener('DOMContentLoaded', () => {
+  const birthYearElement = document.querySelector('#birth-year');
+  let isYearOptionExisted = false;
 
-//option 목록 생성 여부 확인
-isYearOptionExisted = false;
-birthYearElement.addEventListener('focus', () => {
-  if(!isYearOptionExisted) {
-    for(let i = 2025; i >= 1940; i--) {
-      const option = document.createElement('option')
-      option.setAttribute('value', i)
-      option.innerText = i
-      birthYearElement.appendChild(option);
+  //option 목록 생성 여부 확인
+  birthYearElement.addEventListener('focus', () => {
+    if (!isYearOptionExisted) {
+      for (let i = 2025; i >= 1940; i--) {
+        const birthOption = document.createElement('option');
+        birthOption.setAttribute('value', i);
+        birthOption.innerText = i;
+        birthYearElement.appendChild(birthOption);
+      }
+      isYearOptionExisted = true; // 중복 추가 방지
     }
-  }
+  });
 });
 
 
