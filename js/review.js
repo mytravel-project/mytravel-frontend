@@ -76,7 +76,8 @@ const renderReviews = async () => {
 
 // 리뷰 등록 기능
 const insertReview = async () => {
-  const reviewText = document.getElementById("reviewText").value.trim();
+  const reviewTextElement = document.getElementById("reviewText");
+  const reviewText = reviewTextElement.value.trim();
 
   if (!reviewText) {
     alert("리뷰를 입력해주세요.");

@@ -2,7 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 122px;
+  justify-content: center;
+  width: 100%; /* 전체 너비 설정 */
+  max-width: 950px; /* 최대 너비 제한 */
+  margin: 122px auto; /* 중앙 정렬 */
   padding: 100px 20px 27px 20px;
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -11,15 +14,50 @@
   text-align: center;
 }
 
+.detailTitle h2 {
+  font-weight: 800;
+  color: #333;
+  font-size: 36px;
+}
+
+.detailTitle span {
+  margin: 15px 0px;
+}
+
+.detailTitle h3 {
+  padding: 25px 0 0;
+  font-weight: 500;
+  font-size: 28px;
+  color: #333;
+  letter-spacing: -1px;
+  box-shadow: inset 0 -12px 0 rgba(255, 223, 223, 1);
+}
+
+ul {
+  list-style: none;
+}
+
 .detailTab {
   width: 100%;
 }
 
-.detailTab a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
+.detailTab ul li {
+  float: left;
+  width: 25%;
   text-align: center;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.detailTab a {
+  color: #333;
+  position: relative;
+  display: block;
+  line-height: 63px;
+  font-size: 18px;
+  color: #666;
+  letter-spacing: -1px;
+  text-decoration: none;
 }
 
 .detailTab a.active {
@@ -73,8 +111,42 @@ textarea {
   padding: 15px 20px 15px 20px;
 }
 
+#infoContainer {
+  width: 100%;
+  max-width: 950px;
+  margin-top: 24px;
+}
+
+#infoContainer h3 {
+  padding: 31px 0 9px;
+  margin-top: 0;
+  font-size: 24px;
+  border-bottom: 2px solid #333;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #333;
+}
+
+#infoContainer p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.7;
+  padding-top: 33px;
+}
+
 #reviewContainer {
+  width: 100%;
+  max-width: 950px;
   margin-top: 20px;
+}
+
+#reviewContainer h2 {
+  padding: 31px 0 9px;
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #333;
 }
 
 #reviewCount {
@@ -133,4 +205,31 @@ textarea {
 .reviewActions button {
   border: none;
   background-color: transparent;
+}
+
+#imageContainer {
+  width: 950px;
+  height: 600px;
+  display: flex; /* 내부 요소 가운데 정렬 */
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%; /* 컨테이너에 꽉 차도록 설정 */
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* 슬라이드 크기를 Swiper에 맞춤 */
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%; /* 이미지가 슬라이드 크기에 맞도록 설정 */
+  height: 100%;
+  object-fit: contain; /* 이미지 비율 유지하면서 빈 공간 채움 */
 }
