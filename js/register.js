@@ -104,6 +104,7 @@ document
         if (!modal) {
           modal = new bootstrap.Modal(modalElement);
         }
+        alert("대한민국 구석구석에 오신 것을 환영합니다✨");
         modal.hide();
       }
     } catch (error) {
@@ -347,7 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const birthYearElement = document.querySelector('#birth-year');
+  const birthYearElement = document.getElementById('birth-year');
   let isYearOptionExisted = false;
 
   //option 목록 생성 여부 확인
