@@ -28,6 +28,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" 
   </head>
   <body>
     <nav class="navbar">
@@ -273,36 +274,13 @@
             </ul>
           </div>
         </div>
-
+        <!-- 동적으로 메인 이미지 추가 -->
         <div class="img_wrap">
           <div
             class="swiper-container gallery-top swiper-container-initialized swiper-container-horizontal"
           >
-            <div class="swiper-wrapper">
-              <div class="swiper-slide swiper-slide-duplicate">
-                <img
-                  src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=c662ebd7-c019-45b4-8069-4e14cfdfd553&amp;mode=raw"
-                  alt="댕댕이도 함께 가요🐾<br>댕댕 여행 지도"
-                />
-              </div>
-              <div class="swiper-slide swiper-slide-duplicate">
-                <img
-                  src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=82c271f0-4263-4fe3-8612-21d84fe5a8a5&mode=raw"
-                  alt="댕댕이도 함께 가요🐾<br>댕댕 여행 지도"
-                />
-              </div>
-              <div class="swiper-slide swiper-slide-duplicate">
-                <img
-                  src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=c40a532b-8c88-42e0-8f0d-335f0cb175d2&mode=raw"
-                  alt="댕댕이도 함께 가요🐾<br>댕댕 여행 지도"
-                />
-              </div>
-              <div class="swiper-slide swiper-slide-duplicate">
-                <img
-                  src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=a794af8d-865b-4175-8663-355d06c0d1a1&mode=raw"
-                  alt="댕댕이도 함께 가요🐾<br>댕댕 여행 지도"
-                />
-              </div>
+            <div class="swiper-wrapper" id="getMainImages">
+              
             </div>
           </div>
         </div>
@@ -381,10 +359,10 @@
                   >
                     <swiper-container
                       class="swiper-wrapper"
-                      space-between="25"
+                      space-between="30"
                       slides-per-view="3"
                       loop="true"
-                      autoplay="true"
+                      autoplay="true" dir="rtl"
                     >
                       <swiper-slide
                         ><a href="#"
@@ -423,12 +401,12 @@
                     id="tab2"
                   >
                     <swiper-container
-                      class="swiper-wrapper"
-                      space-between="25"
-                      slides-per-view="3"
-                      loop="true"
-                      autoplay="true"
-                    >
+                    class="swiper-wrapper"
+                    space-between="30"
+                    slides-per-view="3"
+                    loop="true"
+                    autoplay="true" dir="rtl"
+                  >
                       <swiper-slide
                         ><a href="#"
                           ><img
@@ -454,12 +432,12 @@
                     id="tab3"
                   >
                     <swiper-container
-                      class="swiper-wrapper"
-                      space-between="25"
-                      slides-per-view="3"
-                      loop="true"
-                      autoplay="true"
-                    >
+                    class="swiper-wrapper"
+                    space-between="30"
+                    slides-per-view="3"
+                    loop="true"
+                    autoplay="true" dir="rtl"
+                  >
                       <swiper-slide
                         ><a href="#"
                           ><img
@@ -758,7 +736,7 @@
           </div>
 
           <!-- section/travelnews -->
-          <div class="container mt-3 travelNews">
+          <div class="container mt-5 travelNews">
             <div class="row customNews">
               <div class="col-sm-6 p-3">
                 <a href="#"
@@ -815,6 +793,7 @@
               </div>
             </div>
           </div>
+          <!-- 동적으로 배너 추가 -->
           <div id="marketingBanner" class="public_banner">
             <div class="banner">
               <swiper-container
@@ -835,6 +814,7 @@
 
     <!------------------ script ---------------------->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
