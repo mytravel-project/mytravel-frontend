@@ -1,0 +1,114 @@
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.main_curation_area .area_tab {
+  height: 59px;
+  padding: 11px 0 0;
+  border-bottom: 1px solid #e2e3e7;
+  border-top: 1px solid #e2e3e7;
+}
+
+.main_curation_area .area_tab ul {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+}
+
+.main_curation_area .area_tab ul li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.main_curation_area .area_tab ul li button {
+  height: 35px;
+  border-radius: 50px;
+  width: 50px;
+  font-size: 16px;
+}
+
+.area_tab ul li button.all.on {
+  background: #333;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.main_curation_area .tab_cont .hot {
+  margin: 20px 0 0 -20px;
+  height: 281px;
+  padding: 0px;
+}
+
+.main_curation_area .tab_cont ul {
+  display: flex;
+}
+
+.main_curation_area .tab_cont .hot li {
+  flex-grow: 1;
+  position: relative;
+  width: 220px;
+}
+
+.main_curation_area .tab_cont .hot li a {
+  margin-left: 20px;
+}
+
+.main_curation_area .tab_cont ul li a {
+  position: relative;
+  display: block;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+.main_curation_area .tab_cont .hot li .img_scale {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.main_curation_area .tab_cont .hot .img_wrap {
+  border-radius: 5px;
+  height: 220px;
+  transition: all 0.7s;
+  overflow: hidden;
+}
+
+.main_curation_area .tab_cont ul li .img_wrap {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  transition: all 0.7s;
+}
+
+.main_curation_area .tab_cont .hot li strong {
+  display: block;
+  margin: 12px 0 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  text-align: center;
+  line-height: 19px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
