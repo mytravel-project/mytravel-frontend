@@ -20,15 +20,6 @@ a {
   display: none;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  z-index: 110;
-}
-
 #user-service {
   display: flex;
   gap: 10px;
@@ -117,6 +108,12 @@ a {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 110;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -125,7 +122,7 @@ a {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo img{
+.logo img {
   width: 220px;
   padding-left: 10px;
   color: #333;
