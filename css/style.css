@@ -12,6 +12,10 @@ table {
   margin: 0;
 }
 
+a {
+  color: #333;
+}
+
 .hidden {
   display: none;
 }
@@ -28,10 +32,6 @@ table {
 #user-service {
   display: flex;
   gap: 10px;
-}
-
-#effectMsg {
-  font-family: "NanumSquare";
 }
 
 .modal-header,
