@@ -75,8 +75,19 @@ const restoreLikeStatus = async () => {
     });
 };
 
+async function handleLikeButtonClick(event) {
+    if (event.target.classList.contains("like-btn")) {
+        const placeId = event.target.dataset.placeId;
+        await toggleLike(placeId, event.target);
+    }
+}
+
+//로그인 중복 방지를 위해 분리
 document.addEventListener("DOMContentLoaded", async () => {
-    await checkLoginState();
+    await restoreLikeStatus();
+});
+
+document.addEventListener("DOMContentLoaded", async () => {
     await restoreLikeStatus();
 
     document.body.addEventListener("click", async (event) => {
