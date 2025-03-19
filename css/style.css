@@ -12,6 +12,10 @@ table {
   margin: 0;
 }
 
+a {
+  color: #333;
+}
+
 .hidden {
   display: none;
 }
@@ -28,10 +32,6 @@ table {
 #user-service {
   display: flex;
   gap: 10px;
-}
-
-#effectMsg {
-  font-family: "NanumSquare";
 }
 
 .modal-header,
@@ -125,17 +125,10 @@ table {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: bold;
+.logo img{
+  width: 220px;
+  padding-left: 10px;
   color: #333;
-}
-
-.circle {
-  display: inline-block;
-  border: 1px solid #333;
-  border-radius: 50%;
-  padding: 2px 5px;
 }
 
 .nav-menu {
@@ -157,6 +150,7 @@ table {
 }
 
 .search-container {
+  width: 300px;
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
@@ -166,6 +160,7 @@ table {
 }
 
 .search-container input {
+  width: 100%;
   border: none;
   outline: none;
   font-size: 14px;

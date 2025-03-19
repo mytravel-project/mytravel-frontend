@@ -12,16 +12,17 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/like.css" />
-    <link rel="stylesheet" href="/css/travelnews.css" />
-    <link rel="stylesheet" href="/css/hotplace.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css"
     />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/like.css" />
+    <link rel="stylesheet" href="/css/travelnews.css" />
+    <link rel="stylesheet" href="/css/hotplace.css" />
     <link rel="stylesheet" href="css/kokkok-AI.css" />
+    <link rel="stylesheet" href="/css/spring-travel.css" />
     <link rel="stylesheet" href="css/main-showcase.css" />
     <link
       rel="stylesheet"
@@ -30,7 +31,9 @@
   </head>
   <body>
     <nav class="navbar">
-      <div class="logo">대한민국 <span class="circle">구</span>석구석</div>
+      <div class="logo">
+        <a href="#"><img src="/img/logo-visitkorea-black.png" /></a>
+      </div>
       <ul class="nav-menu">
         <li><a href="#">홈</a></li>
         <li><a href="#">테마</a></li>
@@ -68,7 +71,14 @@
             Logout
           </a>
         </div>
-        <span class="icon">🌐 한국어 ▼</span>
+        <span class="icon"
+          >🌐
+          <select class="box" id="language" name="language">
+            <option value="한국어" selected>한국어</option>
+            <option value="영어">영어</option>
+            <option value="일본어">일본어</option>
+          </select>
+        </span>
       </div>
     </nav>
     <!-- signupModal -->
@@ -152,25 +162,21 @@
               <label for="birth-year">출생 연도</label
               ><span style="color: red">*</span>
               <select class="box" id="birth-year" name="birth_year">
-                <option disabled selected>출생 연도</option>
-                <option value="2000">2000</option>
-                <option value="1999">1999</option>
-                <option value="1998">1998</option></select
+                <option disabled selected>출생 연도</option></select
               ><br />
 
               <label for="residenceState">거주지</label
               ><span style="color: red">*</span>
-              <select class="box" id="residenceState" name="residence_state">
-                <option value="" disabled selected>도/광역시 선택</option>
-                <option value="seoul">서울</option>
-                <option value="busan">부산</option>
-                <option value="gumi">구미</option>
-              </select>
-              <select class="box" id="residenceCity" name="residence_city">
-                <option value="" disabled selected>시/군/구 선택</option>
-                <option value="gangnam">강남구</option>
-                <option value="gangdong">강동구</option>
-                <option value="dobong">도봉구</option></select
+              <select
+                class="box"
+                id="residenceState"
+                name="residence_state"
+              ></select>
+              <select
+                class="box"
+                id="residenceCity"
+                name="residence_city"
+              ></select
               ><br /><br />
             </form>
           </div>
@@ -221,8 +227,7 @@
         </div>
       </div>
     </div>
-
-    <!-- section/travel-kokkok -->
+    <!-- main page -->
     <div
       id="mainContainerPC"
       style="visibility: visible; position: static; left: -9999px"
@@ -318,155 +323,328 @@
           </div>
         </div>
       </div>
-    </div>
-    <div id="contents" class="main_contents">
-      <div class="pc_main_cont">
-        <div class="main_curation_area">
-          <h2>
-            <a href="#"
-              ><img src="img/tit_curation_area.png" alt="여행콕콕"
-            /></a>
-          </h2>
-          <div class="cont_wrap">
-            <ul class="tab">
-              <li class="menu3 on">
-                <a href="#tabMenu03" title="선택됨">
-                  <span>AI콕콕</span>
-                </a>
-              </li>
-              <li class="menu1">
-                <a href="#tabMenu01" title="">
-                  <span>핫플콕콕</span>
-                </a>
-              </li>
-              <li class="menu2">
-                <a href="#tabMenu02" title="">
-                  <span>AI콕콕 플래너</span>
-                </a>
-              </li>
-            </ul>
-            <div class="tab_cont active" id="tabMenu01">
-              <h3 class="blind">핫플콕콕</h3>
-              <p>
-                관광 빅데이터 정보로 분석한 지역별 핫한 여행지와 맛집을
-                소개합니다.
-              </p>
-              <div class="area_tab">
-                <ul class="swiper-wrapper">
-                  <li>
-                    <button type="button" class="all on" title="선택됨">
-                      전국
-                    </button>
-                  </li>
-                  <li><button type="button" class="">서울</button></li>
-                  <li><button type="button" class="">인천</button></li>
-                  <li><button type="button" class="">대전</button></li>
-                  <li><button type="button" class="">대구</button></li>
-                  <li><button type="button" class="">광주</button></li>
-                  <li><button type="button" class="">부산</button></li>
-                  <li><button type="button" class="">울산</button></li>
-                  <li><button type="button" class="">세종</button></li>
-                  <li><button type="button" class="">경기</button></li>
-                  <li><button type="button" class="">강원</button></li>
-                  <li><button type="button" class="">충북</button></li>
-                  <li><button type="button" class="">충남</button></li>
-                  <li><button type="button" class="">경북</button></li>
-                  <li><button type="button" class="">경남</button></li>
-                  <li><button type="button" class="">전북</button></li>
-                  <li><button type="button" class="">전남</button></li>
-                  <li><button type="button" class="">제주</button></li>
-                </ul>
+
+      <div id="contents" class="main_contents">
+        <div class="pc_main_cont">
+          <!-- section/spring-travel -->
+          <div class="special_box" style="overflow: hidden">
+            <div
+              class="bg"
+              style="
+                background: url('https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=346c644c-62cf-41a3-a294-7e1f42116132')
+                  50% center no-repeat rgb(255, 255, 255);
+              "
+            ></div>
+            <div class="cont">
+              <em class="tag">여행가는 봄 🌱</em>
+              <div class="tit_wrap">
+                <h2 class="mtit">
+                  <a href="#">올 봄, 여행은 유행, 지역은 흥행</a>
+                </h2>
+                <p class="stit">
+                  3월부터 5월까지 이어지는 국내여행 캠페인을 즐겨보세요.<br /><b
+                    style="font-size: 15px; font-weight: 500; color: #3b561a"
+                    >*봄맞이 여행혜택 및 정보는 5월까지 다양하게 업데이트될
+                    예정입니다.</b
+                  >
+                </p>
+                <span class="day">2025. 3. 1. ~ 2025. 5. 31.</span>
               </div>
-              <ul class="hot">
-                <li
-                  onclick="___traceCurationConsume(this)"
-                  data-curation-type="HOT"
-                  data-page="SITE_MAIN"
-                  data-content-order="1"
-                  data-cot-id="4238a295-934a-4417-9548-8fc2d82692ac"
-                  data-content-type="12"
-                >
-                  <a
-                    href="javascript:goCurationContent('4238a295-934a-4417-9548-8fc2d82692ac', '온양관광호텔 온천탕', 'MAIN_A', 'undefined');"
-                  >
-                    <div class="img_scale" style="height: 100%">
+              <a class="img" href="#"
+                ><img
+                  src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=9d51353d-f906-470d-a6ec-763e959f0550"
+                  alt=""
+              /></a>
+              <div class="list">
+                <div class="menu">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
                       <div
-                        class="img_wrap"
-                        style="
-                          background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=aec4fe03-3778-4bf2-9a0b-4a6f379c42fa&amp;mode=progress);
-                        "
-                      ></div>
+                        class="swiper-slide active"
+                        style="margin-right: 10px"
+                      >
+                        <a href="#tab1">봄맞이 할인혜택</a>
+                      </div>
+                      <div class="swiper-slide" style="margin-right: 10px">
+                        <a href="#tab2">봄맞이 이벤트</a>
+                      </div>
+                      <div class="swiper-slide" style="margin-right: 10px">
+                        <a href="#tab3">봄맞이 여행정보</a>
+                      </div>
                     </div>
-                    <strong>온양관광호텔 온천탕</strong>
+                  </div>
+                </div>
+                <div class="banner">
+                  <div
+                    class="swiper-container swiper-container-content active"
+                    id="tab1"
+                  >
+                    <swiper-container
+                      class="swiper-wrapper"
+                      space-between="25"
+                      slides-per-view="3"
+                      loop="true"
+                      autoplay="true"
+                    >
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=acb81a6f-c34e-41e4-abf1-33a00d129e33"
+                            alt="렌터카 할인" /></a
+                      ></swiper-slide>
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=149f0f93-99cf-4d69-bc1f-388f71556913"
+                            alt="숙세페 할인" /></a
+                      ></swiper-slide>
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=0e5032b1-9e12-4067-aeab-136f72a5875a"
+                            alt="여행상품 특별 할인전" /></a
+                      ></swiper-slide>
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=8e5e28d2-1a29-4baf-b86b-c4d3ae625642"
+                            alt="철도 할인" /></a
+                      ></swiper-slide>
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&id=a7fb7e6b-14aa-404a-ae57-f8315f30281f"
+                            alt="전라남도 힐링 자전거여행" /></a
+                      ></swiper-slide>
+                    </swiper-container>
+                  </div>
+                  <div
+                    class="swiper-container swiper-container-content"
+                    id="tab2"
+                  >
+                    <swiper-container
+                      class="swiper-wrapper"
+                      space-between="25"
+                      slides-per-view="3"
+                      loop="true"
+                      autoplay="true"
+                    >
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=a614933a-05ce-47c7-bd47-04dd9eefca85"
+                            alt="허영만 이벤트" /></a
+                      ></swiper-slide>
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=539f6db6-d761-4c6c-8f5a-d7d5ebabdd15"
+                            alt="여행으로-또" /></a
+                      ></swiper-slide>
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=64f051e1-15d5-4f15-97c0-1b82fc92005e"
+                            alt="오디 EVENT! 봄맞이 여행 퀴즈이벤트" /></a
+                      ></swiper-slide>
+                    </swiper-container>
+                  </div>
+                  <div
+                    class="swiper-container swiper-container-content"
+                    id="tab3"
+                  >
+                    <swiper-container
+                      class="swiper-wrapper"
+                      space-between="25"
+                      slides-per-view="3"
+                      loop="true"
+                      autoplay="true"
+                    >
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=0da39119-3858-446c-8bc1-efab3b51c49e"
+                            alt="놀거리 혜택" /></a
+                      ></swiper-slide>
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=c3f96d16-99c0-45a2-89d1-0aaf054dc08c"
+                            alt="숨은 관광지 " /></a
+                      ></swiper-slide>
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=88f02d57-b5ed-4146-9333-e9e01ca489f5"
+                            alt="봄꽃여행 가이드" /></a
+                      ></swiper-slide>
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=cebc0a0d-0cd4-4c90-94bd-968f3a8faac5"
+                            alt="한국관광 100선" /></a
+                      ></swiper-slide>
+                      <swiper-slide
+                        ><a href="#"
+                          ><img
+                            src="https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=9e84bf91-9144-4cd3-9592-8392bcb24975"
+                            alt="[한국관광공사 X 카카오모빌리티] 댕댕 여행 지도" /></a
+                      ></swiper-slide>
+                    </swiper-container>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- section/travel-kokkok -->
+          <div class="main_curation_area">
+            <h2>
+              <a href="#"
+                ><img src="img/tit_curation_area.png" alt="여행콕콕"
+              /></a>
+            </h2>
+            <div class="cont_wrap">
+              <ul class="tab">
+                <li class="menu3 on">
+                  <a href="#tabMenu03" title="선택됨">
+                    <span>AI콕콕</span>
                   </a>
                 </li>
-                <li
-                  onclick="___traceCurationConsume(this)"
-                  data-curation-type="HOT"
-                  data-page="SITE_MAIN"
-                  data-content-order="2"
-                  data-cot-id="e21b5720-48a0-4162-8540-cd095f931d93"
-                  data-content-type="12"
-                >
-                  <a
-                    href="javascript:goCurationContent('e21b5720-48a0-4162-8540-cd095f931d93', '설악산국립공원(남설악)', 'MAIN_A', 'undefined');"
-                  >
-                    <div class="img_scale" style="height: 100%">
-                      <div
-                        class="img_wrap"
-                        style="
-                          background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=899ec17c-9a40-4384-84fc-924060315582&amp;mode=progress);
-                        "
-                      ></div>
-                    </div>
-                    <strong>설악산국립공원(남설악)</strong>
+                <li class="menu1">
+                  <a href="#tabMenu01" title="">
+                    <span>핫플콕콕</span>
                   </a>
                 </li>
-                <li
-                  onclick="___traceCurationConsume(this)"
-                  data-curation-type="HOT"
-                  data-page="SITE_MAIN"
-                  data-content-order="3"
-                  data-cot-id="2fa6a351-c3ec-403b-88e1-d351cc88c499"
-                  data-content-type="28"
-                >
-                  <a
-                    href="javascript:goCurationContent('2fa6a351-c3ec-403b-88e1-d351cc88c499', '골프존카운티 안성Q', 'MAIN_A', 'undefined');"
-                  >
-                    <div class="img_scale" style="height: 100%">
-                      <div
-                        class="img_wrap"
-                        style="
-                          background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=7c3ac64a-82f2-4a61-b9c0-00b11b1bf5d1&amp;mode=progress);
-                        "
-                      ></div>
-                    </div>
-                    <strong>골프존카운티 안성Q</strong>
-                  </a>
-                </li>
-                <li
-                  onclick="___traceCurationConsume(this)"
-                  data-curation-type="HOT"
-                  data-page="SITE_MAIN"
-                  data-content-order="4"
-                  data-cot-id="70a80bd0-67b1-4537-ba17-b18e091fc12a"
-                  data-content-type="12"
-                >
-                  <a
-                    href="javascript:goCurationContent('70a80bd0-67b1-4537-ba17-b18e091fc12a', '재한유엔기념공원 (UN기념공원)', 'MAIN_A', 'undefined');"
-                  >
-                    <div class="img_scale" style="height: 100%">
-                      <div
-                        class="img_wrap"
-                        style="
-                          background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=596cb1f3-c99b-4e3b-a3c4-bc04931a78b3&amp;mode=progress);
-                        "
-                      ></div>
-                    </div>
-                    <strong>재한유엔기념공원 (UN기념공원)</strong>
+                <li class="menu2">
+                  <a href="#tabMenu02" title="">
+                    <span>AI콕콕 플래너</span>
                   </a>
                 </li>
               </ul>
+              <div class="tab_cont active" id="tabMenu01">
+                <h3 class="blind">핫플콕콕</h3>
+                <p>
+                  관광 빅데이터 정보로 분석한 지역별 핫한 여행지와 맛집을
+                  소개합니다.
+                </p>
+                <div class="area_tab">
+                  <ul class="swiper-wrapper">
+                    <li>
+                      <button type="button" class="all on" title="선택됨">
+                        전국
+                      </button>
+                    </li>
+                    <li><button type="button" class="">서울</button></li>
+                    <li><button type="button" class="">인천</button></li>
+                    <li><button type="button" class="">대전</button></li>
+                    <li><button type="button" class="">대구</button></li>
+                    <li><button type="button" class="">광주</button></li>
+                    <li><button type="button" class="">부산</button></li>
+                    <li><button type="button" class="">울산</button></li>
+                    <li><button type="button" class="">세종</button></li>
+                    <li><button type="button" class="">경기</button></li>
+                    <li><button type="button" class="">강원</button></li>
+                    <li><button type="button" class="">충북</button></li>
+                    <li><button type="button" class="">충남</button></li>
+                    <li><button type="button" class="">경북</button></li>
+                    <li><button type="button" class="">경남</button></li>
+                    <li><button type="button" class="">전북</button></li>
+                    <li><button type="button" class="">전남</button></li>
+                    <li><button type="button" class="">제주</button></li>
+                  </ul>
+                </div>
+                <ul class="hot">
+                  <li
+                    onclick="___traceCurationConsume(this)"
+                    data-curation-type="HOT"
+                    data-page="SITE_MAIN"
+                    data-content-order="1"
+                    data-cot-id="4238a295-934a-4417-9548-8fc2d82692ac"
+                    data-content-type="12"
+                  >
+                    <a
+                      href="javascript:goCurationContent('4238a295-934a-4417-9548-8fc2d82692ac', '온양관광호텔 온천탕', 'MAIN_A', 'undefined');"
+                    >
+                      <div class="img_scale" style="height: 100%">
+                        <div
+                          class="img_wrap"
+                          style="
+                            background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=aec4fe03-3778-4bf2-9a0b-4a6f379c42fa&amp;mode=progress);
+                          "
+                        ></div>
+                      </div>
+                      <strong>온양관광호텔 온천탕</strong>
+                    </a>
+                  </li>
+                  <li
+                    onclick="___traceCurationConsume(this)"
+                    data-curation-type="HOT"
+                    data-page="SITE_MAIN"
+                    data-content-order="2"
+                    data-cot-id="e21b5720-48a0-4162-8540-cd095f931d93"
+                    data-content-type="12"
+                  >
+                    <a
+                      href="javascript:goCurationContent('e21b5720-48a0-4162-8540-cd095f931d93', '설악산국립공원(남설악)', 'MAIN_A', 'undefined');"
+                    >
+                      <div class="img_scale" style="height: 100%">
+                        <div
+                          class="img_wrap"
+                          style="
+                            background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=899ec17c-9a40-4384-84fc-924060315582&amp;mode=progress);
+                          "
+                        ></div>
+                      </div>
+                      <strong>설악산국립공원(남설악)</strong>
+                    </a>
+                  </li>
+                  <li
+                    onclick="___traceCurationConsume(this)"
+                    data-curation-type="HOT"
+                    data-page="SITE_MAIN"
+                    data-content-order="3"
+                    data-cot-id="2fa6a351-c3ec-403b-88e1-d351cc88c499"
+                    data-content-type="28"
+                  >
+                    <a
+                      href="javascript:goCurationContent('2fa6a351-c3ec-403b-88e1-d351cc88c499', '골프존카운티 안성Q', 'MAIN_A', 'undefined');"
+                    >
+                      <div class="img_scale" style="height: 100%">
+                        <div
+                          class="img_wrap"
+                          style="
+                            background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=7c3ac64a-82f2-4a61-b9c0-00b11b1bf5d1&amp;mode=progress);
+                          "
+                        ></div>
+                      </div>
+                      <strong>골프존카운티 안성Q</strong>
+                    </a>
+                  </li>
+                  <li
+                    onclick="___traceCurationConsume(this)"
+                    data-curation-type="HOT"
+                    data-page="SITE_MAIN"
+                    data-content-order="4"
+                    data-cot-id="70a80bd0-67b1-4537-ba17-b18e091fc12a"
+                    data-content-type="12"
+                  >
+                    <a
+                      href="javascript:goCurationContent('70a80bd0-67b1-4537-ba17-b18e091fc12a', '재한유엔기념공원 (UN기념공원)', 'MAIN_A', 'undefined');"
+                    >
+                      <div class="img_scale" style="height: 100%">
+                        <div
+                          class="img_wrap"
+                          style="
+                            background-image: url(https://cdn.visitkorea.or.kr/img/call?cmd=VIEW&amp;id=596cb1f3-c99b-4e3b-a3c4-bc04931a78b3&amp;mode=progress);
+                          "
+                        ></div>
+                      </div>
+                      <strong>재한유엔기념공원 (UN기념공원)</strong>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="tab_cont active" id="tabMenu03">
               <h3 class="blind">AI콕콕</h3>
@@ -578,61 +756,62 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- section/travelnews -->
-        <div class="container mt-3 travelNews">
-          <div class="row customNews">
-            <div class="col-sm-6 p-3">
-              <a href="#"
-                ><img
-                  src="img/travelnews.png"
-                  alt="지금 바로 '가볼래-터' 구독하고 여행복권 긁으러 가기😉"
-              /></a>
-            </div>
-            <div class="col-sm-6 p-3">
-              <div class="article bd0">
-                <a
-                  href="#"
-                  class="tit_atc"
-                  title="오늘의 여행 소식 페이지로 이동"
-                  >오늘의 여행 소식<span class="btn_more"
-                    ><i class="ri-add-line"></i></span
-                ></a>
-                <ul class="list_board">
-                  <li class="non">
-                    <a
-                      href="#"
-                      title="한국관광공사, KTX 중앙선 개통 연계 부산 봄꽃 여행상품 출시 로 이동"
-                      ><em style="color: #1f40c3">한국관광공사ㅣ</em
-                      >한국관광공사, KTX 중앙선 개통 연계 부산 봄꽃 여행상품
-                      출시</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title="창경궁에서 선보이는 빛의 향연, 「창경궁 물빛연화」(3.7.~12.31.) 로 이동"
-                      ><em style="color: #1f40c3">국가유산청ㅣ</em>창경궁에서
-                      선보이는 빛의 향연, 「창경궁 물빛연화」(3.7.~12.31.)</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title="봄맞이 여행, 숙박할인권으로 준비하세요 로 이동"
-                      ><em style="color: #1f40c3">문화체육관광부ㅣ</em>봄맞이
-                      여행, 숙박할인권으로 준비하세요</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      title="트레킹 제일도시 원주시, 2025년 걷기여행길 프로그램 운영 로 이동"
-                      ><em style="color: #1f40c3">원주시청ㅣ</em>트레킹 제일도시
-                      원주시, 2025년 걷기여행길 프로그램 운영</a
-                    >
-                  </li>
-                </ul>
+
+          <!-- section/travelnews -->
+          <div class="container mt-3 travelNews">
+            <div class="row customNews">
+              <div class="col-sm-6 p-3">
+                <a href="#"
+                  ><img
+                    src="img/travelnews.png"
+                    alt="지금 바로 '가볼래-터' 구독하고 여행복권 긁으러 가기😉"
+                /></a>
+              </div>
+              <div class="col-sm-6 p-3">
+                <div class="article bd0">
+                  <a
+                    href="#"
+                    class="tit_atc"
+                    title="오늘의 여행 소식 페이지로 이동"
+                    >오늘의 여행 소식<span class="btn_more"
+                      ><i class="ri-add-line"></i></span
+                  ></a>
+                  <ul class="list_board">
+                    <li class="non">
+                      <a
+                        href="#"
+                        title="한국관광공사, KTX 중앙선 개통 연계 부산 봄꽃 여행상품 출시 로 이동"
+                        ><em style="color: #1f40c3">한국관광공사ㅣ</em
+                        >한국관광공사, KTX 중앙선 개통 연계 부산 봄꽃 여행상품
+                        출시</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        title="창경궁에서 선보이는 빛의 향연, 「창경궁 물빛연화」(3.7.~12.31.) 로 이동"
+                        ><em style="color: #1f40c3">국가유산청ㅣ</em>창경궁에서
+                        선보이는 빛의 향연, 「창경궁 물빛연화」(3.7.~12.31.)</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        title="봄맞이 여행, 숙박할인권으로 준비하세요 로 이동"
+                        ><em style="color: #1f40c3">문화체육관광부ㅣ</em>봄맞이
+                        여행, 숙박할인권으로 준비하세요</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#"
+                        title="트레킹 제일도시 원주시, 2025년 걷기여행길 프로그램 운영 로 이동"
+                        ><em style="color: #1f40c3">원주시청ㅣ</em>트레킹
+                        제일도시 원주시, 2025년 걷기여행길 프로그램 운영</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -666,6 +845,6 @@
     <script src="js/login.js"></script>
     <script src="js/like.js"></script>
     <script src="js/showcase.js"></script>
-    <script></script>
+    <script src="js/spring-travel.js"></script>
   </body>
 </html>
