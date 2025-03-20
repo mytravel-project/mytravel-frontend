@@ -16,8 +16,11 @@ window.onload = async () => {
       }
     });
 
-    document.getElementById("getBannerImages").innerHTML = getBannerImages;
-    document.getElementById("getMainImages").innerHTML = getMainImages;
+    // Swiper 컨테이너 내부의 swiper-wrapper에 삽입
+    document.querySelector("#getBannerImages .swiper-wrapper").innerHTML =
+      getBannerImages;
+
+    document.querySelector("#getMainImages").innerHTML = getMainImages;
 
     // Swiper 다시 초기화
     new Swiper(".mySwiper", {
