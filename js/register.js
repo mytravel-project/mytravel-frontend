@@ -1,3 +1,6 @@
+import config from "./config.js";
+const { RECAPTCHA_KEY } = config;
+
 document.getElementById("nickname").addEventListener("input", isValidNickname);
 document.getElementById("nickname").addEventListener("blur", async () => {
   if (!isValidNickname()) return;
@@ -287,76 +290,85 @@ function checkPassword() {
 let storedData;
 
 async function fetchData() {
-    try {
-        const response = await fetch("https://raw.githubusercontent.com/cosmosfarm/korea-administrative-district/master/korea-administrative-district.json");
-        
-        if (!response.ok) {
-            throw new Error(response.status);
-        }
-        storedData = await response.json();
-    } catch (error) {
-        console.error(error);
+  try {
+    const response = await fetch(
+      "https://raw.githubusercontent.com/cosmosfarm/korea-administrative-district/master/korea-administrative-district.json"
+    );
+
+    if (!response.ok) {
+      throw new Error(response.status);
     }
+    storedData = await response.json();
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 //거주지 필터링하기
 function displayResidence() {
-    const stateName = []; //도/광역시 저장 배열
-    const cityName = {}; //시/군/구 저장 배열
+  const stateName = []; //도/광역시 저장 배열
+  const cityName = {}; //시/군/구 저장 배열
 
-    storedData.data.forEach(e => {
-        const state = Object.keys(e)[0]; //도/광역시
-        const cityList = e[state]; //도/광역시에 매칭되는 시/군/구 배열
+  storedData.data.forEach((e) => {
+    const state = Object.keys(e)[0]; //도/광역시
+    const cityList = e[state]; //도/광역시에 매칭되는 시/군/구 배열
 
-        stateName.push(state); //도/광역시 추가
-        cityName[state] = cityList; //시/군/구 추가
-    });
+    stateName.push(state); //도/광역시 추가
+    cityName[state] = cityList; //시/군/구 추가
+  });
 
-    const stateSelect = document.getElementById("residenceState");
-    const citySelect = document.getElementById("residenceCity");
+  const stateSelect = document.getElementById("residenceState");
+  const citySelect = document.getElementById("residenceCity");
 
-    stateSelect.innerHTML = `<option value="" disabled selected>도/광역시 선택</option>`
-    stateName.forEach(state => {
+  stateSelect.innerHTML = `<option value="" disabled selected>도/광역시 선택</option>`;
+  stateName.forEach((state) => {
+    const option = document.createElement("option");
+    option.value = state;
+    option.textContent = state;
+    stateSelect.appendChild(option);
+  });
+
+  citySelect.innerHTML = `<option value="" disabled selected>시/군/구 선택</option>`;
+
+  stateSelect.addEventListener("change", function () {
+    const selectedState = this.value;
+
+    citySelect.innerHTML = `<option value="" disabled selected>시/군/구 선택</option>`;
+
+    if (selectedState && cityName[selectedState]) {
+      cityName[selectedState].forEach((city) => {
         const option = document.createElement("option");
-        option.value = state;
-        option.textContent = state;
-        stateSelect.appendChild(option);
-    });
-
-    citySelect.innerHTML = `<option value="" disabled selected>시/군/구 선택</option>`
-
-    stateSelect.addEventListener("change", function() {
-      const selectedState = this.value;
-
-      citySelect.innerHTML = `<option value="" disabled selected>시/군/구 선택</option>`;
-
-      if(selectedState && cityName[selectedState]) {
-        cityName[selectedState].forEach(city => {
-          const option = document.createElement("option");
-          option.value = city;
-          option.textContent = city;
-          citySelect.appendChild(option);
-        });
-      }
-    });
-}   
+        option.value = city;
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+    }
+  });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetchData().then(() => {
-        displayResidence();
-    });
+  fetchData().then(() => {
+    displayResidence();
+  });
+
+  const signupFooter = document.getElementById("signupFooter");
+  const recaptchaDiv = document.createElement("div");
+  recaptchaDiv.className = "g-recaptcha";
+  recaptchaDiv.setAttribute("data-sitekey", RECAPTCHA_KEY);
+  recaptchaDiv.setAttribute("data-callback", "recaptcha");
+  signupFooter.prepend(recaptchaDiv);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const birthYearElement = document.getElementById('birth-year');
+document.addEventListener("DOMContentLoaded", () => {
+  const birthYearElement = document.getElementById("birth-year");
   let isYearOptionExisted = false;
 
   //option 목록 생성 여부 확인
-  birthYearElement.addEventListener('focus', () => {
+  birthYearElement.addEventListener("focus", () => {
     if (!isYearOptionExisted) {
       for (let i = 2025; i >= 1940; i--) {
-        const birthOption = document.createElement('option');
-        birthOption.setAttribute('value', i);
+        const birthOption = document.createElement("option");
+        birthOption.setAttribute("value", i);
         birthOption.innerText = i;
         birthYearElement.appendChild(birthOption);
       }
@@ -364,5 +376,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-
