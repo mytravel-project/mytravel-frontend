@@ -1,19 +1,19 @@
-const tabBtns = document.querySelectorAll(".menu .swiper-slide-spring");
-const tabContents = document.querySelectorAll(".spring-content");
+const tabButtonElements = document.querySelectorAll(".menu .tab-btn");
+const tabContentElements = document.querySelectorAll(".spring-content");
 
-tabBtns.forEach((btn, index) => {
+tabButtonElements.forEach((btn, index) => {
     btn.addEventListener('click', (e) => {
         e.preventDefault();
 
-        tabBtns.forEach((btn) => {
+        tabButtonElements.forEach((btn) => {
             btn.classList.remove("on");
         });
 
-        tabContents.forEach((content) => {
+        tabContentElements.forEach((content) => {
             content.classList.remove("on");
         });
 
-        tabBtns[index].classList.add("on");
-        tabContents[index].classList.add("on");
+        tabButtonElements[index].classList.add("on");
+        tabContentElements[index].classList.add("on");
     })
 })
