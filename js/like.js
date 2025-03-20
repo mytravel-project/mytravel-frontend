@@ -97,3 +97,23 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 });
+
+const tabBtns = document.querySelectorAll(".tab .tabMenu");
+const tabContents = document.querySelectorAll(".tab_cont");
+
+tabBtns.forEach((btn, index) => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        tabBtns.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+        tabContents.forEach((content) => {
+            content.classList.remove("active");
+        });
+
+        tabBtns[index].classList.add("active");
+        tabContents[index].classList.add("active");
+    })
+})

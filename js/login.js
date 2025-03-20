@@ -21,10 +21,21 @@ submitLoginButton.addEventListener("click", async () => {
     return;
   }
 
-  let response = await axios.post("http://localhost:8080/tokenLogin", {
-    email,
-    password,
-  });
+  let Authorization = sessionStorage.getItem("Authorization");
+
+  let response = await axios.post(
+    "http://localhost:8080/tokenLogin",
+    {
+      email,
+      password,
+    },
+    {
+      headers: {
+        Authorization: Authorization,
+        "Content-Type": "application/json", // JSON 형식
+      },
+    }
+  );
 
   const token = response.data.Authorization;
   const nickname = response.data.nickname;
@@ -50,7 +61,18 @@ submitLoginButton.addEventListener("click", async () => {
 });
 
 logoutButton.addEventListener("click", async () => {
-  await axios.post("http://localhost:8080/logout");
+  let Authorization = sessionStorage.getItem("Authorization");
+  console.log(Authorization);
+  await axios.post(
+    "http://localhost:8080/logout",
+    {},
+    {
+      headers: {
+        Authorization: Authorization,
+        "Content-Type": "application/json", // JSON 형식
+      },
+    }
+  );
   sessionStorage.removeItem("nickname");
   sessionStorage.removeItem("Authorization");
   axios.defaults.headers.common["Authorization"] = "";
@@ -62,7 +84,7 @@ const setLoginState = () => {
   const nickname = sessionStorage.getItem("nickname");
 
   if (Authorization && nickname) {
-    axios.defaults.headers.common["Authorization"] = Authorization;
+    // axios.defaults.headers.common["Authorization"] = Authorization;
     document.getElementById("loginSpan").innerHTML = `${nickname}`;
     openLoginButton.classList.add("hidden");
     openSignupButton.classList.add("hidden");

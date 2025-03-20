@@ -22,10 +22,18 @@ const checkLoginState = () => {
 
 // 리뷰 가져오기
 const renderReviews = async () => {
+  let Authorization = sessionStorage.getItem("Authorization");
+
   try {
     const response = await axios.post(
       "http://localhost:8080/getRecentReviews",
-      { placeId }
+      { placeId },
+      {
+        headers: {
+          Authorization: Authorization,
+          "Content-Type": "application/json", // JSON 형식
+        },
+      }
     );
 
     const reviews = response.data;
@@ -85,10 +93,21 @@ const insertReview = async () => {
   }
 
   try {
-    const response = await axios.post("http://localhost:8080/insertReview", {
-      placeId,
-      reviewText,
-    });
+    let Authorization = sessionStorage.getItem("Authorization");
+
+    const response = await axios.post(
+      "http://localhost:8080/insertReview",
+      {
+        placeId,
+        reviewText,
+      },
+      {
+        headers: {
+          Authorization: Authorization,
+          "Content-Type": "application/json", // JSON 형식
+        },
+      }
+    );
 
     if (response.status === 200) {
       alert("리뷰가 등록되었습니다.");
@@ -129,17 +148,27 @@ const saveReview = async (id) => {
   const editInput = document.getElementById("editInput");
   const reviewText = editInput.value.trim();
 
-  console.log(reviewText);
   if (!reviewText) {
     alert("수정할 내용을 입력하세요.");
     return;
   }
 
   try {
-    const response = await axios.post("http://localhost:8080/updateReview", {
-      id,
-      reviewText,
-    });
+    let Authorization = sessionStorage.getItem("Authorization");
+
+    const response = await axios.post(
+      "http://localhost:8080/updateReview",
+      {
+        id,
+        reviewText,
+      },
+      {
+        headers: {
+          Authorization: Authorization,
+          "Content-Type": "application/json", // JSON 형식
+        },
+      }
+    );
 
     if (response.status === 200) {
       alert("리뷰가 수정되었습니다.");
@@ -156,10 +185,20 @@ const deleteReview = async (id) => {
   if (!confirm("정말 삭제하겠습니까?")) return;
 
   try {
-    console.log({ id });
-    const response = await axios.post("http://localhost:8080/deleteReview", {
-      id,
-    });
+    let Authorization = sessionStorage.getItem("Authorization");
+
+    const response = await axios.post(
+      "http://localhost:8080/deleteReview",
+      {
+        id,
+      },
+      {
+        headers: {
+          Authorization: Authorization,
+          "Content-Type": "application/json", // JSON 형식
+        },
+      }
+    );
 
     console.log(response);
 

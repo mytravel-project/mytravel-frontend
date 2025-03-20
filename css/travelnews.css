@@ -1,99 +1,107 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: #eee;
-    margin: 0;
-    padding: 0;
+  background: #eee;
+  margin: 0;
+  padding: 0;
 }
 
-a:link, a:visited, a:hover, a:focus, a:active {
-    text-decoration: none;
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
 }
 
 div {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-dl, ul, ol, menu, li {
-    list-style: none;
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
 }
 
 .travelNews {
-    max-width: 980px;
-    margin-top: 80px auto 0;
+  max-width: 980px;
+  margin-top: 80px auto 0;
 }
 
 .travelNews a img {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .travelNews .customNews .tit_atc {
-    font-weight: 800 !important;
-    font-size: 22px !important;
-    letter-spacing: -1px;
-    margin-bottom: 8px !important;
-    padding-left: 0;
+  font-weight: 800 !important;
+  font-size: 22px !important;
+  letter-spacing: -1px;
+  margin-bottom: 8px !important;
+  padding-left: 0;
 }
 
 .tit_atc .btn_more {
-    padding-left: 260px;
+  padding-left: 260px;
 }
 
 .travelNews .article {
-    width: 455px;
-    padding-left: 15px;
+  width: 455px;
+  padding-left: 15px;
 }
 
 .list_board {
-    padding-top: 10px;
-    padding-left: 0;
+  padding-top: 10px;
+  padding-left: 0;
 }
 
 .list_board li {
-    border-bottom: 1px solid #ddd;   
+  border-bottom: 1px solid #ddd;
 }
 
 .list_board li a {
-    overflow: hidden;
-    display: block;
-    width: 100%;
-    font-weight: bold;
-    color: #333;
-    font-size: 16px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    line-height: 49px;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 49px;
 }
 
 .list_board li a em {
-    padding-right: 5px;
-    font-style: normal;
-    font-weight: bold;
+  padding-right: 5px;
+  font-style: normal;
+  font-weight: bold;
 }
 
 swiper-container {
-    width: 100%;
-    height: 160px;
-    background: #eee;
-    margin-top: 30px;
+  width: 100%;
+  height: 160px;
+  background: #eee;
+  margin-top: 30px;
 }
 
 swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
-    .travelNews .customNews {
-        flex-direction: column;
-    }
+  .travelNews .customNews {
+    flex-direction: column;
+  }
 
-    .travelNews .customNews .col-sm-6 {
-        width: 100%;
-    }
+  .travelNews .customNews .col-sm-6 {
+    width: 100%;
+  }
 }

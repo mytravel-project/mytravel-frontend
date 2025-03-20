@@ -1,3 +1,6 @@
+import config from "./config.js";
+const { API_KEY } = config;
+
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
 
@@ -12,3 +15,8 @@ window.addEventListener("scroll", function () {
     navbar.style.boxShadow = "none"; // 그림자 제거
   }
 });
+
+window.goToDetail = async (element) => {
+  const id = element.getAttribute("data-cot-id");
+  window.location.href = `detail.html?id=${id}`;
+};
