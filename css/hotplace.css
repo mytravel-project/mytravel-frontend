@@ -112,3 +112,9 @@ a:active {
   white-space: nowrap;
   overflow: hidden;
 }
+
+.main_curation_area .area_tab ul li button.all.on {
+  background: #333;
+  color: #fff;
+  border: 1px solid #333;
+}

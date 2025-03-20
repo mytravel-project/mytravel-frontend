@@ -213,5 +213,28 @@ const deleteReview = async (id) => {
   window.location.reload();
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+  const submitBtn = document.querySelector(".submitBtn");
+
+  if (submitBtn) {
+    submitBtn.addEventListener("click", () => {
+      let Authorization = sessionStorage.getItem("Authorization");
+      let nickname = sessionStorage.getItem("nickname");
+
+      if (
+        !Authorization ||
+        Authorization === "" ||
+        !nickname ||
+        nickname === ""
+      ) {
+        const modal = new bootstrap.Modal(
+          document.getElementById("loginModal")
+        );
+        modal.show();
+      }
+    });
+  }
+});
+
 checkLoginState();
 renderReviews();
