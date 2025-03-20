@@ -62,7 +62,7 @@ document
       !residence_state ||
       !residence_city
     ) {
-      alert("모든 필드를 입력해야 합니다.");
+      alert("모든 필드를 입력해야 합니다☹️");
       return;
     }
 
