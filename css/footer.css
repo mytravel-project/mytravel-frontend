@@ -259,7 +259,7 @@ footer .footer_data .btm_menu {
 }
 
 footer .footer_data .btm_menu li:first-child {
-    padding-left: 2px;
+    padding-left: 13px;
 }
 
 footer .footer_data .btm_menu li {
@@ -281,12 +281,11 @@ footer .footer_data .btm_menu a {
 
 footer .footer_data .ft_address {
     clear: both;
-    padding-top: 6px;
 }
 
 footer .footer_data .ft_address li {
     display: inline-block;
-    margin-right: 5px;
+    margin-left: 35px;
     line-height: 1.8;
     color: #666;
     font-size: 13px;
