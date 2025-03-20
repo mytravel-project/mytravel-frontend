@@ -84,7 +84,7 @@ caption,
   background: url(/img/menu_curation_area3.png) 50% -50px no-repeat;
 }
 
-.main_curation_area .tab li .active a {
+.main_curation_area .tab li.active a {
   background-position: 50% 0 !important;
 }
 
