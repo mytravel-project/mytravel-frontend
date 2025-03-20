@@ -1,5 +1,5 @@
-const tabBtns = document.querySelectorAll(".menu .swiper-slide");
-const tabContents = document.querySelectorAll(".swiper-container-content");
+const tabBtns = document.querySelectorAll(".menu .swiper-slide-spring");
+const tabContents = document.querySelectorAll(".spring-content");
 
 tabBtns.forEach((btn, index) => {
     btn.addEventListener('click', (e) => {

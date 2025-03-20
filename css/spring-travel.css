@@ -230,10 +230,10 @@ swiper-slide img {
     margin: 0 auto;
 }
 
-.swiper-container-content {
+.spring-content {
     display: none;
 }
 
-.swiper-container-content.on {
+.spring-content.on {
     display: block;
 }
