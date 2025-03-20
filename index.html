@@ -827,15 +827,13 @@
           <!-- 동적으로 배너 추가 -->
           <div id="marketingBanner" class="public_banner">
             <div class="banner">
-              <swiper-container
-                class="mySwiper"
-                pagination="true"
-                pagination-clickable="true"
-                loop="true"
-                autoplay="true"
-                id="getBannerImages"
-              >
-              </swiper-container>
+              <div id="getBannerImages" class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                  <!-- 여기에 JavaScript로 동적으로 이미지가 삽입됨 -->
+                </div>
+                <!-- 페이지네이션 추가 -->
+                <div class="swiper-pagination"></div>
+              </div>
             </div>
           </div>
         </div>

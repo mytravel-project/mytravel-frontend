@@ -26,7 +26,7 @@ const getImageList = async (placeId) => {
       swiperWrapper.appendChild(slide);
     });
 
-    new Swiper(".mySwiper", {
+    new Swiper(".reviewImgSwiper", {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
