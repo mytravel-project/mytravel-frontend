@@ -85,12 +85,23 @@ const renderReviews = async () => {
 // 리뷰 등록 기능
 const insertReview = async () => {
   const reviewTextElement = document.getElementById("reviewText");
-  const reviewText = reviewTextElement.value.trim();
+  let reviewText = reviewTextElement.value.trim();
 
   if (!reviewText) {
     alert("리뷰를 입력해주세요.");
     return;
   }
+
+  function escapeHTML(str) {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  reviewText = escapeHTML(reviewText);
 
   try {
     let Authorization = sessionStorage.getItem("Authorization");
@@ -132,7 +143,7 @@ const updateReview = async (reviewId, event) => {
   }
 
   // 기존 리뷰 텍스트 가져오기
-  const reviewTextElement = review.querySelector(".reviewText");
+  let reviewTextElement = review.querySelector(".reviewText");
   const oldText = reviewTextElement.textContent;
 
   // 입력 필드로 변경
