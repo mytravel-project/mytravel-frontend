@@ -137,7 +137,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     position: static;
 }
 
-.special_box .swiper-container {
+.swiper-container {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -154,7 +154,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     transform: translate3d(0, 0, 0);
 }
 
-.special_box .swiper-wrapper {
+.swiper-wrapper {
     position: relative;
     width: 100%;
     height: 100%;
@@ -184,18 +184,13 @@ a:link, a:visited, a:hover, a:focus, a:active {
     letter-spacing: -0.5px;
 }
 
-.special_box .swiper-container .swiper-notification {
+.swiper-container .swiper-notification {
     position: absolute;
     left: 0;
     top: 0;
     pointer-events: none;
     opacity: 0;
     z-index: -1000;
-}
-
-.special_box .banner {
-    padding: 0 40px;
-    position: relative;
 }
 
 .special_box .banner {
@@ -207,33 +202,33 @@ a:link, a:visited, a:hover, a:focus, a:active {
     margin: 0 30px;
 }
 
-.swiper-container-content {
-    display: none;
-}
-
-.swiper-container-content.on {
-    display: block;
-}
-
-.swiper-container-content swiper-container {
+.special_box swiper-container {
     width: 100%;
     height: 100%;
     background: #ffffff;
 }
 
-.swiper-container-content swiper-slide {
+.special_box swiper-slide {
     text-align: center;
     background: #ffffff;
 }
 
-.swiper-container-content swiper-slide a {
+.special_box swiper-slide a {
     display: block;
     padding-bottom: 30px;
 }
 
-.swiper-container-content swiper-slide img {
+.special_box swiper-slide img {
     display: block;
     object-fit: cover;
     border-radius: 5px;
     margin: 0 auto;
+}
+
+.spring-content.on {
+    display: block;
+}
+
+.spring-content {
+    display: none;
 }
