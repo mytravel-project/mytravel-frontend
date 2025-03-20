@@ -194,11 +194,6 @@ a:link, a:visited, a:hover, a:focus, a:active {
 }
 
 .special_box .banner {
-    padding: 0 40px;
-    position: relative;
-}
-
-.special_box .banner {
     padding-top: 1px;
     position: static;
     width: auto;
