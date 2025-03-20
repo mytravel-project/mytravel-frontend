@@ -181,3 +181,12 @@ a {
   font-size: 16px;
   cursor: pointer;
 }
+
+#loginModal .modal-dialog {
+  max-width: 600px; /* 원하는 너비로 조절 */
+  width: 90%; /* 화면 크기에 따라 자동 조절 */
+}
+
+#loginModal .modal-content {
+  padding: 20px; /* 내용과 가장자리 간격 조정 */
+}
