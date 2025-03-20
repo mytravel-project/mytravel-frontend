@@ -18,6 +18,7 @@
       href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/like.css" />
     <link rel="stylesheet" href="/css/travelnews.css" />
     <link rel="stylesheet" href="/css/hotplace.css" />
@@ -338,23 +339,29 @@
                 <div class="menu">
                   <div class="swiper-container">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide on" style="margin-right: 10px">
+                      <div
+                        class="swiper-slide tab-btn on"
+                        style="margin-right: 10px"
+                      >
                         <a href="#tab1">봄맞이 할인혜택</a>
                       </div>
-                      <div class="swiper-slide" style="margin-right: 10px">
+                      <div
+                        class="swiper-slide tab-btn"
+                        style="margin-right: 10px"
+                      >
                         <a href="#tab2">봄맞이 이벤트</a>
                       </div>
-                      <div class="swiper-slide" style="margin-right: 10px">
+                      <div
+                        class="swiper-slide tab-btn"
+                        style="margin-right: 10px"
+                      >
                         <a href="#tab3">봄맞이 여행정보</a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="banner">
-                  <div
-                    class="swiper-container swiper-container-content on"
-                    id="tab1"
-                  >
+                  <div class="swiper-container spring-content on" id="tab1">
                     <swiper-container
                       class="swiper-wrapper"
                       space-between="30"
@@ -400,10 +407,7 @@
                       ></swiper-slide>
                     </swiper-container>
                   </div>
-                  <div
-                    class="swiper-container swiper-container-content"
-                    id="tab2"
-                  >
+                  <div class="swiper-container spring-content" id="tab2">
                     <swiper-container
                       class="swiper-wrapper"
                       space-between="30"
@@ -449,10 +453,7 @@
                       ></swiper-slide>
                     </swiper-container>
                   </div>
-                  <div
-                    class="swiper-container swiper-container-content"
-                    id="tab3"
-                  >
+                  <div class="swiper-container spring-content" id="tab3">
                     <swiper-container
                       class="swiper-wrapper"
                       space-between="30"
@@ -840,7 +841,211 @@
         </div>
       </div>
     </div>
+    <!------------ footer --------------->
+    <footer>
+      <div class="area_notice">
+        <div>
+          <div class="notice_slider">
+            <a href="#">[소식]2025 펫가족여행박람회</a>
+          </div>
+          <div class="sel_area">
+            <div class="sel_member">
+              <select title="관광정보 선택" id="relation2">
+                <option value="">관광정보</option>
+                <option
+                  value="https://korean.visitkorea.or.kr/notice/guide_book.do"
+                >
+                  가이드북
+                </option>
+                <option value="http://www.benikea.com">베니키아</option>
+                <option value="https://api.visitkorea.or.kr/#/">
+                  TourAPI4.0
+                </option>
+                <option value="datalab">한국관광 데이터랩</option>
+                <option value="https://touraz.kr/index">
+                  한국관광산업포털
+                </option>
+                <option value="https://conlab.visitkorea.or.kr/">
+                  한국관광 콘텐츠랩
+                </option>
+                <option
+                  value="https://kto.visitkorea.or.kr/kor/souvenir/main.kto"
+                >
+                  관광기념품
+                </option>
+              </select>
+              <a href="#" class="link_view" title="선택관광정보로_새 창 열림"
+                >이동</a
+              >
+            </div>
+            <div class="sel_member">
+              <select name="relation" id="relation" title="유관기관 선택">
+                <option value="">유관기관</option>
+                <option value="http://www.0404.go.kr">
+                  외교부 해외안전여행
+                </option>
+                <option value="https://www.youtube.com/watch?v=muB4_LNZ2Rk">
+                  대한민국의 아름다운영토 독도
+                </option>
+                <option value="http://www.museumonroad.org">
+                  박물관 길위의 인문학
+                </option>
+                <option value="http://www.namdokorea.com">
+                  남도여행길잡이
+                </option>
+                <option value="http://k-mice.visitkorea.or.kr">
+                  한국관광공사 MICE 정보시스템
+                </option>
+                <option value="http://www.mmca.go.kr">국립현대미술관</option>
+                <option value="http://www.ggtour.or.kr">경기관광플랫폼</option>
+              </select>
+              <a href="#" class="link_view" title="선택 유관기관으로_새 창 열림"
+                >이동</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box_footer padding">
+        <div class="footer_sns_list">
+          <strong class="tit">대한민국 구석구석을 SNS에서 만나보세요! </strong>
+          <ul>
+            <li>
+              <a
+                href="http://blog.naver.com/korea_diary/"
+                target="_blank"
+                title="새창"
+              >
+                <span class="ico ico_blog"></span>
+                <em class="sns_name">블로그</em>
+              </a>
+            </li>
 
+            <li>
+              <a
+                href="http://post.naver.com/korea_diary"
+                target="_blank"
+                title="새창"
+              >
+                <span class="ico ico_post"></span>
+                <em class="sns_name">포스트</em>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.facebook.com/9suk9suklive"
+                target="_blank"
+                title="새창"
+              >
+                <span class="ico ico_facebook"></span>
+                <em class="sns_name">페이스북</em>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://twitter.com/kor_visitkorea"
+                target="_blank"
+                title="새창"
+              >
+                <span class="ico ico_twitter"></span>
+                <em class="sns_name">엑스</em>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://story.kakao.com/#ch/visitkorea/"
+                target="_blank"
+                title="새창"
+              >
+                <span class="ico ico_kakaostory"></span>
+                <em class="sns_name">카카오<br />스토리</em>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/kto9suk9suk/"
+                target="_blank"
+                title="새창"
+              >
+                <span class="ico ico_instagram"></span>
+                <em class="sns_name">인스타<br />그램</em>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://band.us/@koreadiary"
+                target="_blank"
+                title="새창"
+              >
+                <span class="ico ico_naver"></span>
+                <em class="sns_name">네이버<br />밴드</em>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer_data">
+          <div class="footer_banner pc_block m_none">
+            <span
+              ><a href="https://www.odii.kr/smarttour_web/webguide/main"
+                ><img
+                  src="/img/fot_link_banner8.png"
+                  alt="오디(odii) 대한민국 관광지 오디오 해설" /></a
+            ></span>
+            <span
+              ><a href="#"
+                ><img
+                  src="https://cdn.visitkorea.or.kr/resources/images/common/fot_link_banner3.gif"
+                  alt="관광정보 - 수정/신규 요청" /></a
+            ></span>
+          </div>
+          <div class="footer_banner pc_block m_none">
+            <span
+              ><a href="#"
+                ><img
+                  src="https://cdn.visitkorea.or.kr/resources/images/common/fot_link_banner6.gif"
+                  alt="대한민국구석구석 WALLPAPE" /></a
+            ></span>
+            <span
+              ><a href="#"
+                ><img
+                  src="https://cdn.visitkorea.or.kr/resources/images/common/fot_link_banner4.gif"
+                  alt="여행 가이드북" /></a
+            ></span>
+          </div>
+          <div class="footer_banner pc_block m_none">
+            <span
+              ><a href="#"
+                ><img
+                  src="https://cdn.visitkorea.or.kr/resources/images/common/fot_link_banner7.gif"
+                  class="pc"
+                  alt="전화/실시간 문자채팅 상담 1330 관광안내" /></a
+            ></span>
+          </div>
+          <ul class="btm_menu">
+            <li><a href="#" class="personal_info">개인정보처리방침</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">위치기반서비스 이용약관</a></li>
+            <li><a href="#" target="_blank" title="새창">저작권정책</a></li>
+            <li><a href="#" target="_blank" title="새창">고객서비스헌장</a></li>
+            <li>
+              <a href="#" target="_blank" title="새창">전자우편무단수집거부</a>
+            </li>
+            <li><a href="#" title="페이지이동">Q&amp;A</a></li>
+            <li><a href="#" target="_blank" title="새창">찾아오시는 길</a></li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+          <ul class="ft_address">
+            <li>
+              <span>우)12345</span
+              ><span>엘지유플러스 유레카시 미래로 10</span>TEL : 02-123-4567
+            </li>
+            <li>사업자등록번호 : 202-80-20808</li>
+            <li>통신판매업신고 : 제2009-세계로-1234호</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <!------------------ script ---------------------->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script
