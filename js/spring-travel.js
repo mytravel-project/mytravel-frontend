@@ -6,14 +6,14 @@ tabBtns.forEach((btn, index) => {
         e.preventDefault();
 
         tabBtns.forEach((btn) => {
-            btn.classList.remove("active");
+            btn.classList.remove("on");
         });
 
         tabContents.forEach((content) => {
-            content.classList.remove("active");
+            content.classList.remove("on");
         });
 
-        tabBtns[index].classList.add("active");
-        tabContents[index].classList.add("active");
+        tabBtns[index].classList.add("on");
+        tabContents[index].classList.add("on");
     })
 })

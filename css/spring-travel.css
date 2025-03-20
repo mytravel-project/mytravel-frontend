@@ -167,7 +167,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     width: auto;
 }
 
-.special_box .menu .swiper-slide.active a {
+.special_box .menu .swiper-slide.on a {
     background: #333;
     color: #fff;
     border: 1px solid #333;
@@ -211,7 +211,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     display: none;
 }
 
-.swiper-container-content.active {
+.swiper-container-content.on {
     display: block;
 }
 
