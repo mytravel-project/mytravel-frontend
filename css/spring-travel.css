@@ -74,7 +74,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
     font-weight: 800;
     letter-spacing: -3px;
     line-height: 43px;
-    max-width: 450px;
+    max-width: 500px;
 }
 
 .special_box h2 a {
@@ -89,7 +89,7 @@ a:link, a:visited, a:hover, a:focus, a:active {
 .special_box h2 a:after {
     content: '';
     position: absolute;
-    right: 0;
+    right: 4px;
     top: 7px;
     display: inline-block;
     width: 27px;

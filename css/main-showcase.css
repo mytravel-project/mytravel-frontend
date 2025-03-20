@@ -236,8 +236,8 @@
 
 .main_showcase .btn {
   position: absolute;
-  right: 0;
-  top: 22px;
+  right: -40px;
+  top: 16px;
   width: 120px;
   display: flex;
   align-items: center;
