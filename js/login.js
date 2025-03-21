@@ -61,6 +61,8 @@ submitLoginButton.addEventListener("click", async () => {
 });
 
 logoutButton.addEventListener("click", async () => {
+  if (!confirm("로그아웃하시겠습니까?")) return;
+
   let Authorization = sessionStorage.getItem("Authorization");
   console.log(Authorization);
   await axios.post(
