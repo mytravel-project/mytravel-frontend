@@ -292,7 +292,7 @@ let storedData;
 async function fetchData() {
   try {
     const response = await fetch(
-      "https://raw.githubusercontent.com/cosmosfarm/korea-administrative-district/master/korea-administrative-district.json"
+      "/public/korea-administrative-district.json"
     );
 
     if (!response.ok) {
@@ -307,7 +307,7 @@ async function fetchData() {
 //거주지 필터링하기
 function displayResidence() {
   const stateName = []; //도/광역시 저장 배열
-  const cityName = {}; //시/군/구 저장 배열
+  const cityName = {}; //시/군/구 저장 객체
 
   storedData.data.forEach((e) => {
     const state = Object.keys(e)[0]; //도/광역시
